@@ -1,4 +1,5 @@
 # Naomi Ngobdjob's Portfolio Design System Documentation
+
 This documentation provides a clear and simplified overview of the design system used for the portfolio project. It includes colors, typography, components, and layouts, along with screenshots of mock-ups for clear communication of the design.
 
 ## 1. Color Palette
@@ -43,4 +44,5 @@ We use a simple and clear color palette throughout the design.
     ![Content Mock-up](footer.png)
     
 ## Conclusion
+
 This documentation serves as a concise reference guide for the design system used in the portfolio project, aiming to facilitate development and maintain consistency in design throughout the project.
