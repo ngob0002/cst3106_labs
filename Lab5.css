@@ -1,0 +1,125 @@
+body {
+    font-family: "Celandine", sans-serif;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+.heading {
+    color: #FFD699;
+}
+
+.dice-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+
+.dice {
+    inline-size: 100px;
+    block-size: 100px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: roll 1s ease-in-out; /* Remove "infinite" for a single rotation */
+    margin: 10px;
+}
+
+.dice .side {
+    inline-size: 100px;
+    block-size: 100px;
+    background-color: #FFF4E3;
+    border: 2px solid #333;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.dice .side.front {
+    transform: translateZ(50px);
+}
+
+.dice .side.back {
+    transform: translateZ(-50px) rotateY(180deg);
+}
+
+.dice .side.top {
+    transform: rotateX(90deg) translateZ(50px);
+}
+
+.dice .side.bottom {
+    transform: rotateX(-90deg) translateZ(50px);
+}
+
+.dice .side.left {
+    transform: rotateY(-90deg) translateZ(50px);
+}
+
+.dice .side.right {
+    transform: rotateY(90deg) translateZ(50px);
+}
+
+button#roll-dice {
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #FFD699;
+    color: #FFF4E3;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button#roll-dice:hover {
+    background-color: #FFEBCD;
+}
+
+button#roll-dice:focus {
+    outline: none;
+}
+
+
+/* ... Previous CSS code ... */
+
+.scorecard {
+    inline-size: 300px;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+.scorecard th {
+    background-color: #FFD699;
+}
+
+.scorecard th, .scorecard td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: center;
+}
+
+.scorecard tr:nth-child(odd) {
+    background-color: #FFEBCD;
+}
+
+.scorecard tr:nth-child(even) {
+    background-color: #FFF4E3;
+}
+
+.dice .dot {
+    inline-size: 10px; /* Adjust the size as needed */
+    block-size: 10px; /* Adjust the size as needed */
+    background-color: #000; /* Adjust the color as needed */
+    border-radius: 50%;
+    display: inline-block;
+    margin: 2px; /* Adjust the margin as needed */
+}
+
+
+/* ... Previous CSS code ... */
+
+@keyframes roll {
+    0% { transform: rotateX(0deg) rotateY(0deg); }
+    100% { transform: rotateX(360deg) rotateY(360deg); }
+}
