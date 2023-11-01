@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="Lab5.css">
+</head>
+<body>
+    <h1 class="heading">Yatzy Game</h1>
+    <div class="dice-container">
+        <div class="dice">
+            <div class="side front">
+                <div class="dots">
+                    <span>2</span>
+                </div>
+            </div>
+            <div class="side back">
+                <div class="dots">
+                    <span>3</span>
+                </div>
+            </div>
+            <div class="side top">
+                <div class="dots">
+                    <span>4</span>
+                </div>
+            </div>
+            <div class="side bottom">
+                <div class="dots">
+                    <span>5</span>
+                </div>
+            </div>
+            <div class="side left">
+                <div class="dots">
+                    <span>6</span>
+                </div>
+            </div>
+            <div class="side right">
+                <div class="dots">
+                    <span>1</span>
+                </div>
+            </div>
+        </div>
+        <!-- Add more dice elements here -->
+        <div class="dice">
+            <div class="side front">
+                <div class="dots">
+                    <span>1</span>
+                </div>
+            </div>
+            <div class="side back">
+                <div class="dots">
+                    <span>2</span>
+                </div>
+            </div>
+            <div class="side top">
+                <div class="dots">
+                    <span>3</span>
+                </div>
+            </div>
+            <div class="side bottom">
+                <div class="dots">
+                    <span>4</span>
+                </div>
+            </div>
+            <div class="side left">
+                <div class="dots">
+                    <span>5</span>
+                </div>
+            </div>
+            <div class="side right">
+                <div class="dots">
+                    <span>6</span>
+                </div>
+            </div>
+        </div>
+        <div class="dice">
+            <div class="side front">
+                <div class="dots">
+                    <span>5</span>
+                </div>
+            </div>
+            <div class="side back">
+                <div class="dots">
+                    <span>3</span>
+                </div>
+            </div>
+            <div class="side top">
+                <div class="dots">
+                    <span>4</span>
+                </div>
+            </div>
+            <div class="side bottom">
+                <div class="dots">
+                    <span>5</span>
+                </div>
+            </div>
+            <div class="side left">
+                <div class="dots">
+                    <span>6</span>
+                </div>
+            </div>
+            <div class="side right">
+                <div class="dots">
+                    <span>2</span>
+                </div>
+            </div>
+        </div>
+        <div class="dice">
+            <div class="side front">
+                <div class="dots">
+                    <span>6</span>
+                </div>
+            </div>
+            <div class="side back">
+                <div class="dots">
+                    <span>1</span>
+                </div>
+            </div>
+            <div class="side top">
+                <div class="dots">
+                    <span>4</span>
+                </div>
+            </div>
+            <div class="side bottom">
+                <div class="dots">
+                    <span>5</span>
+                </div>
+            </div>
+            <div class="side left">
+                <div class="dots">
+                    <span>6</span>
+                </div>
+            </div>
+            <div class="side right">
+                <div class="dots">
+                    <span>2</span>
+                </div>
+            </div>
+        </div>
+        <div class="dice">
+            <div class="side front">
+                <div class="dots">
+                    <span>4</span>
+                </div>
+            </div>
+            <div class="side back">
+                <div class="dots">
+                    <span>3</span>
+                </div>
+            </div>
+            <div class="side top">
+                <div class="dots">
+                    <span>2</span>
+                </div>
+            </div>
+            <div class="side bottom">
+                <div class="dots">
+                    <span>5</span>
+                </div>
+            </div>
+            <div class="side left">
+                <div class="dots">
+                    <span>6</span>
+                </div>
+            </div>
+            <div class="side right">
+                <div class="dots">
+                    <span>1</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button id="roll-dice">Roll the Dice</button>
+
+    <div class="scoreboard">
+        <table class="score-table">
+            <tr>
+                <th></th>
+                <th>Player 1</th>
+            </tr>
+            <tr>
+                <td>Ones</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Twos</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Threes</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Fours</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Fives</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Sixes</td>
+                <td>0</td>
+            </tr>
+        </table>
+        <table class="score-table">
+            <tr>
+                <th></th>
+                <th>Player 1</th>
+            </tr>
+            <tr>
+                <td>Three of a Kind</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Four of a Kind</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Full House</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Small Straight</td>
+                <td>0</td>
+            </tr>
+        </table>
+        <table class="score-table">
+            <tr>
+                <th></th>
+                <th>Player 1</th>
+            </tr>
+            <tr>
+                <td>Large Straight</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Yatzy</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Chance</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td><strong>Total Score</strong></td>
+                <td>0</td>
+            </tr>
+        </table>
+       
+
+    
+    <script src="Lab5.js"></script>
+    <script>
+        // Add your JavaScript code here
+        // Initialize the game, create instances of Dice, YatzyEngine, and YatzyGame, and add event listeners.
+         // Initialize the game
+         const numberOfDice = 5; // Change this to the desired number of dice.
+        const gameDice = new Dice(numberOfDice);
+        const yatzyEngine = new YatzyEngine();
+        const players = ["Player 1", "Player 2"]; // Add more players as needed
+        const game = new YatzyGame(players);
+
+        // Function to initialize dice values
+        function initializeDiceValues() {
+            gameDice.roll();
+            updateDiceValues();
+        }
+
+        function rollDice() {
+            gameDice.roll(); // Roll the dice
+            updateDiceValues(); // Update the HTML to display the new dice values
+        }
+        
+        function updateDiceValues() {
+            const diceElements = document.querySelectorAll('.dice');
+            gameDice.getCurrentDiceValues().forEach((value, index) => {
+                const dots = diceElements[index].querySelector('.dots');
+                dots.innerHTML = ''; // Clear existing dots
+                for (let i = 0; i < value; i++) {
+                    const dot = document.createElement('span');
+                    dot.className = 'dot';
+                    dots.appendChild(dot);
+                }
+            });
+        }
+        // Example: Roll the dice when the button is clicked
+        document.getElementById('roll-dice').addEventListener('click', function() {
+            rollDice(); // Roll the dice
+        });
+    
+    </script>
+</body>
+</html>
