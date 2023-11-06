@@ -1,0 +1,22 @@
+{
+  "name": "lab7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngob0002/cst3106_labs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ngob0002/cst3106_labs/issues"
+  },
+  "homepage": "https://github.com/ngob0002/cst3106_labs#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

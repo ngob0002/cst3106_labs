@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+.die {
+
+    width: 100px;
+
+    height: 100px;
+
+    position: relative;
+
+    top: 10px;
+
+    display: inline-block;
+
+    margin-right: 10px;
+
+    background-image: url('dice1.jpg');
+
+    background-size: 600% 100%;
+
+}
+
+ 
+
+button#roll-button {
+
+    margin: 20px;
+
+    padding: 10px 20px;
+
+    background-color: #FFD699;
+
+    color: #FFF4E3;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    border-radius: 5px;
+
+}
+
+ 
+
+button#roll-button:hover {
+
+    background-color: #FFEBCD;
+
+}
+
+ 
+
+button#roll-button:focus {
+
+    outline: none;
+
+}
+        
+.die.selected {
+
+    border: 2px solid #ff8400c7; /* Change the border style to indicate selection */
+
+}
+
+@keyframes roll {
+
+   0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(90deg); }
+    50% { transform: rotate(180deg); }
+    75% { transform: rotate(270deg); }
+}
+
+ 
+    </style>
+      <title>Roll a Dice</title>
+</head>
+<body>    
+    <button id="roll-button">Roll the Dice</button>
+    <div id="dice-container">
+        <div class="die" id="die1"></div>
+        <div class="die" id="die2"></div>
+        <div class="die" id="die3"></div>
+        <div class="die" id="die4"></div>
+        <div class="die" id="die5"></div>
+    </div>
+    <script>
+        
+   const rollButton = document.getElementById('roll-button');
+        const dice1 = document.getElementById('die1');
+        const dice2 = document.getElementById('die2');
+        const dice3 = document.getElementById('die3');
+        const dice4 = document.getElementById('die4');
+        const dice5 = document.getElementById('die5');
+
+        let diceValues =[];
+
+        // Define an array to store selected dice values
+        let selectedDice = [];
+
+        const diceElements = [dice1, dice2, dice3, dice4, dice5];
+
+        let combinedArray = [];
+
+        rollButton.addEventListener('click', onRollButtonClick);
+
+        function onRollButtonClick() {
+            rollButton.disabled = true;
+            
+            diceElements.forEach(dice => startAnimation(dice));
+            
+            setTimeout(() => {
+                diceValues = diceElements.map(dice => stopAnimation(dice));
+
+                
+                diceValues = diceValues.filter(value => value !== null);
+                combinedArray = selectedDice.concat(diceValues);
+                console.log('Combined Array after selecting',combinedArray)
+                rollButton.disabled = false;
+               
+            }, 1000);
+        }
+  
+    function startAnimation(dice) {
+       
+            dice.style.animation = 'roll 1s steps(6) infinite';
+            
+        }
+    async function stopAnimation(dice) {
+        try {
+        let response = await fetch("/roll-dice");
+        let data = await response.json();
+        dice.style.animation = "none";
+        dice.style.backgroundPosition = -100 * (data.diceValue - 1) + "% 0";
+        rollButton.disabled = false; // Re-enable the button
+        } catch (error) {
+        console.error('Error fetching dice value:', error);
+        }
+    }
+   
+
+    
+    </script>
+</body>
+</html>
