@@ -117,12 +117,7 @@ button#roll-dice:focus {
     display: inline-block;
     margin: 2px; /* Adjust the margin as needed */
 }
-/* ... Previous CSS code ... */
 
-/* Add background colors for the new .score-table elements */
-/* ... Previous CSS code ... */
-
-/* Style for the score tables */
 .score-table {
     inline-size: 300px;
     border-collapse: collapse;
